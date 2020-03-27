@@ -3,6 +3,9 @@
   before granting access to the next middleware/route handler
 */
 
+const jwt = require("jsonwebtoken");
+
+
 module.exports =  async (req, res, next) => {
   const authError = {
     message: "You Shall Not Pass!!"

@@ -22,10 +22,10 @@ server.get("/", (req, res) => {
   res.status(200).json({ message: "all working" });
 });
 
-server.use((err, req, res, next) => {
-  res.status(500).json({
-    message: "Something went wrong"
-  });
-});
+// server.use((err, req, res, next) => {
+//   res.status(500).json({
+//     message: "Something went wrong"
+//   });
+// });
 
 module.exports = server;
