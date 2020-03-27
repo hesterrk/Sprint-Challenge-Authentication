@@ -6,7 +6,6 @@ beforeEach(async () => {
   await db.seed.run();
 });
 
-
 test("home route", async () => {
   const res = await supertest(server).get("/");
   expect(res.statusCode).toBe(200);
@@ -16,8 +15,6 @@ test("home route", async () => {
   expect(res.body.message).toMatch(/all/i);
 });
 
-
-
 test("server enviroment", () => {
-    expect(process.env.DB_ENV).toBe("testing")
-  })
+  expect(process.env.DB_ENV).toBe("testing");
+});
